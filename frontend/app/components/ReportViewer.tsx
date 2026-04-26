@@ -84,7 +84,7 @@ export default function ReportViewer({
     ? subQuestions.reduce((a, b) => a + b.confidence, 0) / subQuestions.length
     : 0;
 
-  const allSources = [...new Set(subQuestions.flatMap((sq) => sq.sources))];
+  const allSources = Array.from(new Set(subQuestions.flatMap((sq) => sq.sources)));
 
   const handleCopy = () => {
     navigator.clipboard.writeText(report);
