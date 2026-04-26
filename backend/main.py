@@ -24,7 +24,7 @@ def create_app() -> FastAPI:
 
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=["http://localhost:3000", "https://researchpilot.vercel.app"],
+        allow_origins=["http://localhost:3000","https://research-pilot-olive.vercel.app"],
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
